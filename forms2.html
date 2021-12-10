@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <title>Document</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.5rem;
+      }
+      form {
+        width: 50%;
+      }
+      label {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="firstname">First Name</label>
+        <input
+          id="firstname"
+          type="text"
+          required
+          minlength="10"
+          maxlength="50"
+        />
+      </div>
+      <div>
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" />
+      </div>
+      <div>
+        <label for="country_code">Country Code</label>
+        <input
+          id="country_code"
+          type="text"
+          pattern="[A-Za-z]{2}"
+          title="Two letter country code"
+        />
+      </div>
+
+      <div>
+        <label for="broswer">Favourite browser</label>
+        <input id="broswer" list="browsers" />
+        <datalist id="browsers">
+          <option value="Edge"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </datalist>
+      </div>
+
+      <div>
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+          <optgroup label="Japan Cars">
+            <option value="1">Toyta</option>
+            <option value="2">Ford</option>
+            <option value="3" selected>Subaru</option>
+            <option value="4">Honda</option>
+          </optgroup>
+          <optgroup label="US Cars">
+            <option value="5">BMW</option>
+            <option value="6">Ford</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div>
+        <div>
+          <input id="member" type="checkbox" />
+          <label for="member">Member</label>
+        </div>
+        <div>
+          <input id="vip" type="checkbox" />
+          <label for="vip">VIP</label>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <input type="radio" name="mailing list" id="yes" />
+          <label for="yes">Join mailing list</label>
+        </div>
+        <div>
+          <input type="radio" name="mailing list" id="no" checked />
+          <label for="no">Do not mailing list</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="fileupload">Upload a PDF document</label>
+        <input type="file" id="fileupload" accept=".pdf" />
+      </div>
+
+      <div>
+        <textarea id="comments" cols="30" rows="10">
+Enter comments here..</textarea
+        >
+      </div>
+
+      <fieldset>
+        <legend>Address:</legend>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Clear</button>
+    </form>
+  </body>
+</html>
